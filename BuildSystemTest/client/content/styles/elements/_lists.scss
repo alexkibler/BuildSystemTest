@@ -1,0 +1,28 @@
+/* VARIABLES
+===========================================*/
+
+
+/* DECLARATIONS
+===========================================*/
+ul.fsd-ul li {
+    padding-top: .5em;
+    line-height: normal;
+}
+
+ul.fsd-ul.fsd-ul-dots {
+    list-style-type: disc;
+    padding-left: 1.25em;
+}
+
+ul.fsd-padless {
+    padding: 0px;
+}
+
+ul.fsd-plain-list {
+    list-style-type: none;
+}
+
+.fsd-guide-ul{
+    -webkit-padding-start: 0; /* remove 40px padding on guide page */
+    word-wrap: break-word;
+}

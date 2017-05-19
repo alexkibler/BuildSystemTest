@@ -1,0 +1,181 @@
+/* VARIABLES
+===========================================*/
+$primary-nav-border-color: $primary-shade-dark;
+$primary-nav-border-top-color: $white;
+$primary-nav-border-hover-color: $primary-shade-dark;
+$primary-nav-active-color: $primary-shade-dark;
+$primary-nav-bg-highlight-color: #f8f8f8;
+$primary-nav-white: #ffffff;
+
+$wizard-step-visited-current-indicator-color: $white;
+
+/* DECLARATIONS
+===========================================*/
+.nav-pills {
+    position: relative;
+//    top: -15px;
+//    margin-left: -15px;
+    @include adjust-at-width($break-lg) { top: 0px; }
+    @include adjust-at-width($break-xs) { top: 0px; }
+
+    &> li{ 
+        @include adjust-at-width($break-lg) { 
+            display: block;
+            float: none;
+            text-align: center;
+        } 
+
+    }
+
+    &> li  a { 
+        border-radius: 0px;
+        color: $primary-nav-active-color;
+        font-size: 1.3em;
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+
+        @include adjust-at-width($break-md) { 
+            border-radius: 0px;
+            margin: 0px 30px 5px 30px;           
+        }
+    }
+
+    li {
+        border-bottom: 2px solid $primary-nav-border-color;
+        border-top: 2px solid $primary-nav-border-top-color;
+        border-radius: 0px;
+        @include adjust-at-width($break-xs) { 
+            display: block;
+            float: none;
+            text-align: center;
+        }
+
+        &.fsd-invisible-link {
+            display: none;
+        }
+
+        &.fsd-inactive-link {
+            &:hover {
+                border-bottom: 2px solid $primary-nav-border-color;
+                border-top: 2px solid $primary-nav-border-top-color;
+            }          
+        }
+
+        &.fsd-active-link {
+            border-bottom: 2px solid $primary-nav-active-color;
+            border-top: 2px solid $primary-nav-active-color;
+            background-color: $primary-nav-active-color;
+            @include adjust-at-width($break-lg) {
+                border-bottom: none;
+            }
+        }
+
+        &.fsd-active-link a {
+            color: #fff;
+
+            &span {
+                &.wizard-step-visited-not-current {
+                    color: $primary-nav-active-color;
+                }
+
+                &.wizard-step-visited-current {
+                    color: $wizard-step-visited-current-indicator-color;
+                }
+            }
+
+            /*@include adjust-at-width($break-lg) {
+                background-color: $primary-nav-bg-highlight-color;
+                color: $primary-nav-active-color;
+            }*/
+        }
+        
+        &:active {
+            text-decoration: none;
+             border-bottom: 2px solid $primary-nav-active-color;
+             @include adjust-at-width($break-md) { border-bottom: none; }
+        }
+
+        &:hover { 
+            border-bottom: 2px solid $primary-nav-border-hover-color;
+            border-top: 2px solid $primary-nav-border-hover-color;
+            text-decoration: none;
+        }
+    }   
+
+    &.staff-nav {
+        &> li {
+            &.fsd-active-link 
+            {
+                color: #fff;
+                background-color: #004b75;
+            }
+
+            &> a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.fsd-progress-tracker {
+    ul.nav-pills {  
+    //    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);      
+            li {               
+                background-color: $white;
+                border-bottom-color: $primary-nav-white;
+                box-shadow: 0 15px 20px -15px $secondary-color;
+                margin-bottom: 2px;
+
+                &:last-of-type {
+                    box-shadow: none;
+                }
+
+                &:hover {
+                    border-top-color: $white;
+                    border-bottom: 2px solid $primary-nav-active-color;
+                }
+                
+                &.fsd-active-link {
+                    border-bottom: 2px solid $primary-nav-active-color;
+                    border-top: 2px solid $primary-nav-active-color;
+                    background-color: $primary-nav-active-color;
+                    @include adjust-at-width($break-lg) {
+                        /*border-bottom: none;*/
+                    }
+                 }   
+                
+                a:hover {
+                    text-decoration:none;
+                }  
+
+                a:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+    .progress {
+        margin-top: 1em;
+    }
+}
+
+
+.nav-stacked {
+    li  {
+        +li {
+            margin-top: 0px;
+        }
+    }
+}
+
+
+
+/*.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: $primary-nav-active-color;
+}*/
+
+.nav-pills > li.active a, .nav-pills > li.active a:hover, .nav-pills > li.active a:focus {
+    color: #fff;
+    background-color: $primary-nav-active-color;
+}

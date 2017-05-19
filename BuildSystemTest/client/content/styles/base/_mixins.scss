@@ -1,0 +1,38 @@
+/* MEDIA QUERIES
+==================================================*/
+@mixin adjust-at-width($media){
+    @if $media == $break-xxl {
+        @media screen and (max-width: $break-xxl) { @content; }
+    }
+    @else if $media == $break-xl {
+        @media screen and (max-width: $break-xl) { @content; }
+    }
+    @else if $media == $break-lg {
+        @media screen and (max-width: $break-lg) { @content; }
+    }
+    @else if $media == $break-md {
+        @media screen and (max-width: $break-md) { @content; }
+    }
+    @else if $media == $break-sm {
+        @media screen and (max-width: $break-sm) { @content; }
+    }
+    @else if $media == $break-xs {
+        @media screen and (max-width: $break-xs) { @content; }
+    }
+}
+
+/* FONT FACE
+==================================================*/
+@mixin font-face($font-family, $file-path, $font-weight, $font-style){
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+             url('#{$file-path}.woff2') format('woff2'),
+             url('#{$file-path}.woff') format('woff'),
+             url('#{$file-path}.ttf') format('truetype'),
+             url('#{$file-path}.svg##{$font-family}') format('svg');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}

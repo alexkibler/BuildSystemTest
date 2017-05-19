@@ -1,0 +1,113 @@
+/* VARIABLES
+===========================================*/
+
+$mobile-toggle-icon-color: $primary-shade-dark;
+//$secondary-nav-bg-color: #4f4f4f;
+$secondary-nav-bg-color: $primary-color;
+$secondary-nav-text-color: $white;
+//$secondary-nav-bg-hover-color: $secondary-shade;
+$secondary-nav-bg-hover-color: $white;
+$secondary-nav-text-hover-color: $primary-color;
+//$secondary-nav-text-hover-color: $gray-dark;
+
+/* DECLARATIONS
+===========================================*/
+
+.navbar-toggle .icon-bar {
+    background-color: $mobile-toggle-icon-color;
+}
+
+.fsd-navbar {
+    background-color: $secondary-nav-bg-color;
+    color: $secondary-nav-bg-hover-color;
+    ul li a {
+      
+        float: right;
+          @include adjust-at-width($break-md) {
+          float: left;
+        }
+        color: $secondary-nav-text-color;
+        text-shadow: none;
+        font-size: 1em;
+        padding: 12px;
+        &:active {
+            color: $secondary-nav-text-hover-color;
+        }
+        &:focus {
+            color: $secondary-nav-text-hover-color;
+        }
+    }
+    .dropdown-menu {
+//        float: right;
+        right: 0;
+        left: auto;
+        background-color: $secondary-nav-bg-color;
+
+        li a {
+            &:hover {
+                background-color: $secondary-nav-bg-hover-color;
+            }
+        }
+    }
+}
+
+.navbar-collapse {
+    padding-left: 5px;
+}
+
+#top-nav {
+    text-align: right;
+}
+
+#top-nav ul {
+    float: right;
+    @include adjust-at-width($break-md) {
+        float: left;
+    }
+    li.fsd-active-link {
+        border-bottom: 3px solid $secondary-nav-text-color;
+        @include adjust-at-width($break-lg) {
+            border-bottom: none;
+        }
+    }
+}
+
+#fsd-menuLogin input {
+    margin: 0px 0px 10px 0px;
+    min-width: 160px;
+}
+
+.nav > li > a {
+    @include adjust-at-width($break-md) {
+        padding: 10px;
+    }
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: $secondary-nav-bg-hover-color;
+    color: $secondary-nav-text-hover-color;
+}
+
+a.navbar-brand span {
+    margin-top: .75em;
+  //  margin:10px;
+    font-size:1em;
+    text-decoration:none;
+    
+    @include adjust-at-width($break-md) {
+     //   font-size: 16px;
+      margin-left: .75em;
+    }
+    @include adjust-at-width($break-sm) {
+     //   font-size: 1.2em;
+       
+    }
+    
+    & img {
+        height:35px;
+        width:auto;
+        display:inline;
+        margin-top:-4px;
+    }
+}

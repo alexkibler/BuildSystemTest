@@ -1,0 +1,77 @@
+/* COLORS
+====================================================*/
+$white: #ffffff;
+
+$purple-dark: #630b33;
+$purple-medium: #872958;
+$purple-medium-light: #a83574;
+$purple-light: #af8499;
+
+$pink: #FFD2E8;
+
+$blue-dark: #395479;
+$blue-light: #398999;
+
+//$green: #79ac80;
+$green: #03DB12;
+$green-dark:  #4ca54c;
+
+$yellow: #eeba06;
+
+/*$orange: #e46d48;
+$orange-red: #e15454;*/
+
+$orange: #e66b00;
+$orange-red: #d33c00;
+
+$red: #df1e25;
+
+$gray: #747474;
+
+$gray-extra-dark: #333;
+$gray-dark: #666;
+$gray-medium-dark: #747474;
+$gray-medium: #9a9a9a;
+$gray-medium-light: #ccc;
+$gray-light: #e5e5e5;
+$gray-extra-light: #f9f9f9;
+
+$black-transparent-half: rgba(0, 0, 0, 0.5);
+
+/* THEME COLORS
+====================================================*/
+$primary-color: #007ac2;
+$primary-shade-dark: #004b75;
+$primary-shade-medium: #8ed6ff;
+$primary-shade-light: #26c281;
+
+$secondary-color: #ad0931;
+$secondary-shade: #ffd520;
+
+$alert-red: #df1e25;
+$alert-yellow: #fdeb00;
+$alert-green: #71bf43;
+
+
+/* DROP SHADOWS
+====================================================*/
+$drop-shadow-light: 5px 5px 15px rgba(0,0,0,0.2);
+
+
+/* MEDIA QUERY BREAKPOINTS
+====================================================*/
+$break-xxl: 1199px;
+$break-xl: 1023px;
+$break-lg: 992px;
+$break-md: 767px;
+$break-sm: 413px;
+$break-xs: 374px;
+
+/* FONTS - remove later
+==================================================*/
+$open-sans-regular: 'open_sansregular';
+$open-sans-condensed-bold: 'open_sans_condensedbold';
+$open-sans-condensed-light: 'open_sanscondensed_light';
+$open-sans-italic: 'open_sansitalic';
+$open-sans-light-italic: 'open_sanslight_italic';
+$open-sans-bold: 'open_sansbold';

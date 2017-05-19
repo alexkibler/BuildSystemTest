@@ -1,0 +1,197 @@
+﻿/* VARIABLES
+===========================================*/
+$current-step-bg-color: $purple-medium;
+$done-step-bg-color: $pink;
+$editing-step-bg-color: $purple-medium;
+
+$wizard-btn-disabled-color: $gray-medium-dark;
+$wizard-btn-disabled-bg-color: $gray-light;
+$wizard-btn-bg-color: $primary-color;
+$wizard-btn-hover-bg-color: $primary-shade-dark;
+$wizard-btn-color: $white;
+
+$fsd-wizard-add-update-btn-bg-color: $green;
+$fsd-wizard-add-update-btn-color: $white;
+
+$step-indicator-text-color: #808080;
+
+$portfolio-border-color: #398a9a;
+$portfolio-bg-color: $gray-extra-light;
+
+$portfolio-table-head-color: #398a9a;
+
+/* DECLARATIONS
+===========================================*/
+.steps-indicator li{
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  text-align: center;
+  line-height: 12px;
+
+  a{
+    color: $step-indicator-text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 10px;
+  }
+
+  &.default{
+      pointer-events: none;
+      a:hover{ color: $step-indicator-text-color; }
+  }
+
+  &.current, &.editing{ pointer-events: none; }
+
+  &.current a:before{
+    background-color: $current-step-bg-color;
+    animation: pulse 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &.done a:before{ background-color: $done-step-bg-color; }
+
+  &.editing a:before{
+    background-color: $editing-step-bg-color;
+    animation: pulse 1s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.fsd-wizard-btn {
+    padding: 4px 15px;
+    border: none;
+    font-size: 1.5em;
+    width: 150px;
+    margin: 5px;
+    border-radius: 0px;
+    background-color: $wizard-btn-bg-color;
+    color: $wizard-btn-color;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-out;
+
+    &:focus {
+        color: $wizard-btn-color;
+    }
+
+    &:hover {
+        background-color: $wizard-btn-hover-bg-color;
+        color: $wizard-btn-color;
+    }
+
+    &:disabled {
+        color: $wizard-btn-disabled-color;
+        background-color: $wizard-btn-disabled-bg-color;
+
+        &:hover {
+            background-color: $wizard-btn-disabled-bg-color;
+        }
+    }
+
+    @include adjust-at-width($break-sm) {
+        width: 100px;
+        font-size: 1em;
+        padding: 7px 15px;
+    }
+}
+
+.fsd-wizard-add-update-btn {
+    background-color: $fsd-wizard-add-update-btn-bg-color;
+    color: $fsd-wizard-add-update-btn-color;
+    border: 1px solid $fsd-wizard-add-update-btn-bg-color;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-out;
+
+    &:focus {
+        color: $fsd-wizard-add-update-btn-color;
+    }
+    &:hover {
+        background-color: $fsd-wizard-add-update-btn-color;
+        color: $fsd-wizard-add-update-btn-bg-color;
+    }
+}
+
+.fsd-portfolio-info {
+     border-top:6px solid $portfolio-border-color;
+     background-color: $portfolio-bg-color;
+
+     table {
+         width:100%;
+
+         thead {
+            color: $portfolio-table-head-color;
+            font-size:1.2em;
+            font-weight:700;
+        }
+     }
+}
+
+.narrative {
+    padding: 10px 10px 10px 20px;
+    border: 1px solid #ddd;
+}
+
+.fsd-question { font-size: medium; }
+
+question-determiner {
+    label {
+        &.control-label {
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+    }
+}
+
+.popover { max-width: 700px; }
+.popover-content { width: 700px; }
+
+.read-more-container {
+    height: 100px;
+    min-height: 100px;
+    overflow: hidden;
+}
+.show-more {
+    overflow: visible;
+    height: auto;
+}
+
+occupation-profile {
+    accordion {
+        .panel.panel-default {
+            border: 1px solid $gray-light;
+            padding: 1em;
+            margin-bottom: 1em;
+
+            .panel-heading {
+                background-color: $white;
+                border:none;             
+                /*margin: 0px 1em;*/
+                color: $primary-shade-dark;
+
+                i {
+                    margin-left: -.5em;
+                }
+            }
+        }
+        .panel-heading {
+            .accordion-toggle {
+
+                outline: none;
+
+                &:before {
+                    content: none;
+                    padding: 0px;
+                    float: none;
+                }
+            }
+        }
+    }
+    h4.panel-title {
+         font-size: 1.5em;
+    }
+}

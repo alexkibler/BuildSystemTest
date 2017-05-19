@@ -1,0 +1,28 @@
+﻿/* VARIABLES
+===========================================*/
+$tag-border-color: $purple-dark;
+$tag-bg-color: $purple-medium;
+$tag-text-color: $white;
+$tag-text-font: Arial, sans-serif;
+
+/* DECLARATIONS
+===========================================*/
+tags-input .tags .tag-item {
+    color: $tag-text-color;
+    background: $tag-bg-color;
+    border: 1px solid $tag-border-color;
+    border-radius: 4px;
+
+    .remove-button{
+        margin: 0 0 0 5px;
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        vertical-align: middle;
+        font-family: $tag-text-font;
+        font-weight: bold;
+        font-size: 16px;
+        color: $tag-text-color;
+    }
+}

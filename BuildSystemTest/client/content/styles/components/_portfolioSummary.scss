@@ -1,0 +1,8 @@
+﻿/* VARIABLES
+===========================================*/
+
+/* DECLARATIONS
+===========================================*/
+#fsd-portfolio-summary {
+    @include adjust-at-width($break-sm) { font-size: .8em; }  
+}

@@ -1,0 +1,27 @@
+﻿/* VARIABLES
+===========================================*/
+
+
+/* DECLARATIONS
+===========================================*/
+.table {
+    td {
+        padding-top:8px;
+        padding-bottom:8px;
+        vertical-align:middle;
+    }
+}
+
+table.fsd-sortable {
+
+    th.fsd-sort-by {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+    
+
+.fsd-activity-table{
+    height: 350px;
+    overflow-x: auto;
+}

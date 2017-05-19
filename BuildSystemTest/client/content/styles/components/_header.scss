@@ -1,0 +1,58 @@
+/* VARIABLES
+===========================================*/
+//$header-bg-color: #f8f8f8;
+$header-bg-color: $gray-extra-light;
+
+/* DECLARATIONS
+===========================================*/
+header {
+    position: relative;
+    z-index: 1000;
+    background-color: $header-bg-color;
+
+    h1 {
+        @include adjust-at-width($break-md) { font-size: 2.5em; }
+        @include adjust-at-width($break-sm) { font-size: 2em; }
+        @include adjust-at-width($break-xs) { font-size: 1.5em; }
+    }
+    
+    h2 {
+        @include adjust-at-width($break-sm) { font-size: 2em; }
+        @include adjust-at-width($break-xs) { font-size: 1.5em; }
+    }
+
+    h4 {
+        @include adjust-at-width($break-lg) { font-size: .9em; }
+        @include adjust-at-width($break-xs) { font-size: .8em; }
+    }
+
+    .fsd-header-img {
+        width: 10em;
+        @include adjust-at-width($break-lg) { 
+            height: auto;
+            width: 80px;
+            margin: 0 auto;
+        }
+        @include adjust-at-width($break-xs) { 
+            height: auto;
+            width: 60px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.fsd-ctcs-logo-col h4 {
+    @include adjust-at-width($break-md) { 
+        font-size: .6em;
+        margin-left: 10px;
+    }
+    @include adjust-at-width($break-xs) { font-size: .5em; }
+}
+
+.fsd-ctcs-logo-col {
+    text-align:right;
+//    padding-bottom:1em;
+    @include adjust-at-width($break-sm) { 
+        margin-bottom: 10px;
+    }
+}

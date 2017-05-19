@@ -1,0 +1,275 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
+  <PropertyGroup>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+    <PostBuildEvent>npm run build-$(ConfigurationName)</PostBuildEvent>
+    <PreBuildEvent></PreBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="%2a%2a\**" />
+    <Compile Remove="dist\**" />
+    <Compile Remove="out-tsc\**" />
+    <Content Remove="%2a%2a\**" />
+    <Content Remove="dist\**" />
+    <Content Remove="out-tsc\**" />
+    <EmbeddedResource Remove="%2a%2a\**" />
+    <EmbeddedResource Remove="dist\**" />
+    <EmbeddedResource Remove="out-tsc\**" />
+    <None Remove="%2a%2a\**" />
+    <None Remove="dist\**" />
+    <None Remove="out-tsc\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="%2a%2a/%2a.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="%2a%2a/%2a.cshtml" />
+    <Content Remove="%2a%2a/%2a.json" />
+    <Content Remove="%2a%2a/web.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="%2a%2a/%2a.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="%2a%2a/%2a" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include=".angular-cli.json" />
+    <Content Include="appsettings.Development.json" />
+    <Content Include="appsettings.json" />
+    <Content Include="bundleconfig.json" />
+    <Content Include="client\tsconfig.app.json" />
+    <Content Include="client\tsconfig.spec.json" />
+    <Content Include="package.json" />
+    <Content Include="Properties\launchSettings.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+    <Content Include="wwwroot\0.chunk.js" />
+    <Content Include="wwwroot\0.chunk.js.map" />
+    <Content Include="wwwroot\favicon.ico" />
+    <Content Include="wwwroot\index.html" />
+    <Content Include="wwwroot\inline.bundle.js" />
+    <Content Include="wwwroot\inline.bundle.js.map" />
+    <Content Include="wwwroot\main.bundle.js" />
+    <Content Include="wwwroot\main.bundle.js.map" />
+    <Content Include="wwwroot\polyfills.bundle.js" />
+    <Content Include="wwwroot\polyfills.bundle.js.map" />
+    <Content Include="wwwroot\styles.bundle.js" />
+    <Content Include="wwwroot\styles.bundle.js.map" />
+    <Content Include="wwwroot\vendor.bundle.js" />
+    <Content Include="wwwroot\vendor.bundle.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include=".gitignore" />
+    <None Include="app.config" />
+    <None Include="client\app\app.component.css" />
+    <None Include="client\app\app.component.html" />
+    <None Include="client\app\app.component.scss" />
+    <None Include="client\app\app.component.spec.ts" />
+    <None Include="client\app\app.component.ts" />
+    <None Include="client\app\app.module.ts" />
+    <None Include="client\app\app.routing.ts" />
+    <None Include="client\app\eager.component.ts" />
+    <None Include="client\assets\.gitkeep" />
+    <None Include="client\content\font\chunkfive-webfont\chunk-demo.html" />
+    <None Include="client\content\font\chunkfive-webfont\chunk-webfont.eot" />
+    <None Include="client\content\font\chunkfive-webfont\chunk-webfont.svg" />
+    <None Include="client\content\font\chunkfive-webfont\chunk-webfont.ttf" />
+    <None Include="client\content\font\chunkfive-webfont\chunk-webfont.woff" />
+    <None Include="client\content\font\chunkfive-webfont\chunk-webfont.woff2" />
+    <None Include="client\content\font\chunkfive-webfont\chunk_five_print-demo.html" />
+    <None Include="client\content\font\chunkfive-webfont\chunk_five_print-webfont.eot" />
+    <None Include="client\content\font\chunkfive-webfont\chunk_five_print-webfont.svg" />
+    <None Include="client\content\font\chunkfive-webfont\chunk_five_print-webfont.ttf" />
+    <None Include="client\content\font\chunkfive-webfont\chunk_five_print-webfont.woff" />
+    <None Include="client\content\font\chunkfive-webfont\chunk_five_print-webfont.woff2" />
+    <None Include="client\content\font\chunkfive-webfont\generator_config.txt" />
+    <None Include="client\content\font\chunkfive-webfont\specimen_files\grid_12-825-55-15.css" />
+    <None Include="client\content\font\chunkfive-webfont\specimen_files\specimen_stylesheet.css" />
+    <None Include="client\content\font\chunkfive-webfont\stylesheet.css" />
+    <None Include="client\content\font\FontAwesome\fontawesome-webfont.eot" />
+    <None Include="client\content\font\FontAwesome\fontawesome-webfont.svg" />
+    <None Include="client\content\font\FontAwesome\fontawesome-webfont.ttf" />
+    <None Include="client\content\font\FontAwesome\fontawesome-webfont.woff" />
+    <None Include="client\content\font\FontAwesome\fontawesome-webfont.woff2" />
+    <None Include="client\content\font\FontAwesome\FontAwesome.otf" />
+    <None Include="client\content\font\open-sans-bold\opensans-bold-webfont.eot" />
+    <None Include="client\content\font\open-sans-bold\opensans-bold-webfont.svg" />
+    <None Include="client\content\font\open-sans-bold\opensans-bold-webfont.ttf" />
+    <None Include="client\content\font\open-sans-bold\opensans-bold-webfont.woff" />
+    <None Include="client\content\font\open-sans-bold\opensans-bold-webfont.woff2" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condbold-webfont.eot" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condbold-webfont.svg" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condbold-webfont.ttf" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condbold-webfont.woff" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condbold-webfont.woff2" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condlight-webfont.eot" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condlight-webfont.svg" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condlight-webfont.ttf" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condlight-webfont.woff" />
+    <None Include="client\content\font\open-sans-condensed\opensans-condlight-webfont.woff2" />
+    <None Include="client\content\font\open-sans-italic\opensans-italic-webfont.eot" />
+    <None Include="client\content\font\open-sans-italic\opensans-italic-webfont.svg" />
+    <None Include="client\content\font\open-sans-italic\opensans-italic-webfont.ttf" />
+    <None Include="client\content\font\open-sans-italic\opensans-italic-webfont.woff" />
+    <None Include="client\content\font\open-sans-italic\opensans-italic-webfont.woff2" />
+    <None Include="client\content\font\open-sans-italic\opensans-lightitalic-webfont.eot" />
+    <None Include="client\content\font\open-sans-italic\opensans-lightitalic-webfont.svg" />
+    <None Include="client\content\font\open-sans-italic\opensans-lightitalic-webfont.ttf" />
+    <None Include="client\content\font\open-sans-italic\opensans-lightitalic-webfont.woff" />
+    <None Include="client\content\font\open-sans-italic\opensans-lightitalic-webfont.woff2" />
+    <None Include="client\content\font\open-sans-light\opensans-light-webfont.eot" />
+    <None Include="client\content\font\open-sans-light\opensans-light-webfont.svg" />
+    <None Include="client\content\font\open-sans-light\opensans-light-webfont.ttf" />
+    <None Include="client\content\font\open-sans-light\opensans-light-webfont.woff" />
+    <None Include="client\content\font\open-sans-light\opensans-light-webfont.woff2" />
+    <None Include="client\content\font\open-sans\opensans-light-webfont.eot" />
+    <None Include="client\content\font\open-sans\opensans-light-webfont.svg" />
+    <None Include="client\content\font\open-sans\opensans-light-webfont.ttf" />
+    <None Include="client\content\font\open-sans\opensans-light-webfont.woff" />
+    <None Include="client\content\font\open-sans\opensans-light-webfont.woff2" />
+    <None Include="client\content\font\open-sans\opensans-regular-webfont.eot" />
+    <None Include="client\content\font\open-sans\opensans-regular-webfont.svg" />
+    <None Include="client\content\font\open-sans\opensans-regular-webfont.ttf" />
+    <None Include="client\content\font\open-sans\opensans-regular-webfont.woff" />
+    <None Include="client\content\font\open-sans\opensans-regular-webfont.woff2" />
+    <None Include="client\content\images\171720713-600.jpg" />
+    <None Include="client\content\images\2-paths.png" />
+    <None Include="client\content\images\carousel-images\276989585.jpg" />
+    <None Include="client\content\images\carousel-images\475853577.jpg" />
+    <None Include="client\content\images\carousel-images\500302354.jpg" />
+    <None Include="client\content\images\carousel-images\504528178.jpg" />
+    <None Include="client\content\images\carousel-images\515147882.jpg" />
+    <None Include="client\content\images\carousel-images\537396306.jpg" />
+    <None Include="client\content\images\compass-yellow.png" />
+    <None Include="client\content\images\dataviz\civil-eng-tech-2014-2017.png" />
+    <None Include="client\content\images\dataviz\const-insp-2014-2017.png" />
+    <None Include="client\content\images\dataviz\elec-eng-tech-2014-2017.png" />
+    <None Include="client\content\images\dataviz\radio-tech-2014-2017.png" />
+    <None Include="client\content\images\dataviz\respi-tech-2014-2017.png" />
+    <None Include="client\content\images\dislike.png" />
+    <None Include="client\content\images\GPSTEM-logo.png" />
+    <None Include="client\content\images\handwriting-wide.jpg" />
+    <None Include="client\content\images\handwriting.jpg" />
+    <None Include="client\content\images\laborMarketGrowthTier1.png" />
+    <None Include="client\content\images\laborMarketGrowthTier2.png" />
+    <None Include="client\content\images\laborMarketGrowthTier3.png" />
+    <None Include="client\content\images\laborMarketGrowthTier4.png" />
+    <None Include="client\content\images\laborMarketGrowthTier5.png" />
+    <None Include="client\content\images\laborMarketGrowthTier6.png" />
+    <None Include="client\content\images\like.png" />
+    <None Include="client\content\images\loader.gif" />
+    <None Include="client\content\images\map-explore-graphic.png" />
+    <None Include="client\content\images\map-marker-yellow.png" />
+    <None Include="client\content\images\map-process-graphic.png" />
+    <None Include="client\content\images\opportunity-counter.png" />
+    <None Include="client\content\images\rolling.gif" />
+    <None Include="client\content\images\spa-opportunities.png" />
+    <None Include="client\content\images\spa-process.png" />
+    <None Include="client\content\images\strongly_dislike.png" />
+    <None Include="client\content\images\strongly_like.png" />
+    <None Include="client\content\images\unsure.png" />
+    <None Include="client\content\images\who-stu-1.jpg" />
+    <None Include="client\content\images\who-stu-2.jpg" />
+    <None Include="client\content\images\who-stu-3.jpg" />
+    <None Include="client\content\images\who-stu-4.jpg" />
+    <None Include="client\content\styles\base\_alignment.scss" />
+    <None Include="client\content\styles\base\_animations.scss" />
+    <None Include="client\content\styles\base\_base.scss" />
+    <None Include="client\content\styles\base\_global.scss" />
+    <None Include="client\content\styles\base\_mixins.scss" />
+    <None Include="client\content\styles\base\_typography.scss" />
+    <None Include="client\content\styles\base\_variables.scss" />
+    <None Include="client\content\styles\components\_adminNavigation.scss" />
+    <None Include="client\content\styles\components\_components.scss" />
+    <None Include="client\content\styles\components\_footer.scss" />
+    <None Include="client\content\styles\components\_header.scss" />
+    <None Include="client\content\styles\components\_interestProfiler.scss" />
+    <None Include="client\content\styles\components\_ngBusy.scss" />
+    <None Include="client\content\styles\components\_ngTagsInput.scss" />
+    <None Include="client\content\styles\components\_ngWizard.scss" />
+    <None Include="client\content\styles\components\_opportunityCounter.scss" />
+    <None Include="client\content\styles\components\_portfolioSummary.scss" />
+    <None Include="client\content\styles\components\_primaryNav.scss" />
+    <None Include="client\content\styles\components\_primaryNavigation.scss" />
+    <None Include="client\content\styles\components\_results.scss" />
+    <None Include="client\content\styles\components\_secondaryNavigation.scss" />
+    <None Include="client\content\styles\elements\_accordions.scss" />
+    <None Include="client\content\styles\elements\_buttons.scss" />
+    <None Include="client\content\styles\elements\_cards.scss" />
+    <None Include="client\content\styles\elements\_checkboxes.scss" />
+    <None Include="client\content\styles\elements\_elements.scss" />
+    <None Include="client\content\styles\elements\_images.scss" />
+    <None Include="client\content\styles\elements\_inputs.scss" />
+    <None Include="client\content\styles\elements\_links.scss" />
+    <None Include="client\content\styles\elements\_lists.scss" />
+    <None Include="client\content\styles\elements\_modals.scss" />
+    <None Include="client\content\styles\elements\_nav.scss" />
+    <None Include="client\content\styles\elements\_panels.scss" />
+    <None Include="client\content\styles\elements\_radioButtons.scss" />
+    <None Include="client\content\styles\elements\_tables.scss" />
+    <None Include="client\content\styles\elements\_textarea.scss" />
+    <None Include="client\content\styles\main.scss" />
+    <None Include="client\content\styles\pages\_dashboard.scss" />
+    <None Include="client\content\styles\pages\_glossary.scss" />
+    <None Include="client\content\styles\pages\_home.scss" />
+    <None Include="client\content\styles\pages\_howItWorks.scss" />
+    <None Include="client\content\styles\pages\_industryOverview.scss" />
+    <None Include="client\content\styles\pages\_pages.scss" />
+    <None Include="client\content\styles\pages\_participatingColleges.scss" />
+    <None Include="client\content\styles\pages\_signIn.scss" />
+    <None Include="client\content\styles\pages\_whatIsPLA.scss" />
+    <None Include="client\content\styles\pages\_wizard.scss" />
+    <None Include="client\environments\environment.prod.ts" />
+    <None Include="client\environments\environment.ts" />
+    <None Include="client\favicon.ico" />
+    <None Include="client\index.html" />
+    <None Include="client\lazy\lazy.component.ts" />
+    <None Include="client\lazy\lazy.module.ts" />
+    <None Include="client\lazy\lazy.routing.ts" />
+    <None Include="client\lazy\lazy.service.ts" />
+    <None Include="client\main.ts" />
+    <None Include="client\polyfills.ts" />
+    <None Include="client\styles.scss" />
+    <None Include="client\test.ts" />
+    <None Include="client\typings.d.ts" />
+    <None Include="karma.conf.js" />
+    <None Include="protractor.conf.js" />
+    <None Include="README.md" />
+    <None Include="ScaffoldingReadMe.txt" />
+  </ItemGroup>
+
+</Project>

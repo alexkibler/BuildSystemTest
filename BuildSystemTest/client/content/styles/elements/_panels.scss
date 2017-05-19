@@ -1,0 +1,227 @@
+/* VARIABLES
+===========================================*/
+$content-panel-border-color: $gray-light;
+
+$dashboard-card-background-color: $white;
+$dashboard-card-content-th-color: $gray-dark;
+$dashboard-card-drop-shadow: $drop-shadow-light;
+$dashboard-card-content-th-font: 'open_sansbold', sans-serif;
+
+$portfolio-summary-border-color: $blue-light;
+$portfolio-summary-dashboard-card-h4-font: 'open_sansregular', sans-serif;
+
+$student-profile-border-color: $green;
+$student-account-info-border-color: $orange;
+$recent-activity-border-color: $yellow;
+$life-experience-inventory-border-color: $orange;
+
+$occupation-info-panel-background-color: $gray-extra-light;
+$occupation-info-panel-border-color: $gray-extra-light;
+$occupation-info-panel-drop-shadow: 10px 10px 9px -6px rgba(181,181,181,1);
+
+$occu-pnl-education-req-border-left: 2px solid $gray-medium;
+
+/* DECLARATIONS
+===========================================*/
+.fsd-form-panel {
+    margin: 0px auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.fsd-content-panel {
+    padding-top: 2em;
+    padding-bottom: 3em;
+
+    &:nth-child(even) {
+        border-bottom: 1px solid $content-panel-border-color;
+    }
+}
+
+.fsd-dashboard-card {
+    padding: 1em;
+    box-shadow: $dashboard-card-drop-shadow;
+    margin-bottom: 1.8em;
+    background-color: $dashboard-card-background-color;
+
+    i { font-size: 1.6em; }
+}
+
+.fsd-dashboard-card .fsd-dashboard-card-header { margin-bottom: 1em; }
+
+.fsd-dashboard-card-content th {
+    font-family: #{$dashboard-card-content-th-font};
+    color: $dashboard-card-content-th-color;
+}
+
+#fsd-student-profile {
+    border-top: 6px solid $student-profile-border-color;
+
+    i, h4 { color: $student-profile-border-color; }
+}
+
+#fsd-student-acct-info {
+    border-top: 6px solid $student-account-info-border-color;
+
+    i { color: $student-account-info-border-color; }
+
+    .fsd-dashboard-card-header h4 { color: $student-account-info-border-color; }
+
+    .fsd-dashboard-card-content h4 {
+        margin-bottom: 1em;
+        color: $dashboard-card-content-th-color;
+    }
+}
+
+#fsd-portfolio-summary {
+    border-top: 6px solid $portfolio-summary-border-color;
+
+    i, h4 { color: $portfolio-summary-border-color; }
+
+    .fsd-dashboard-card-content h4 { font-family: #{$portfolio-summary-dashboard-card-h4-font}; }
+}
+
+#fsd-portfolio-detail {
+    border-top: 6px solid $portfolio-summary-border-color;
+
+    i, h4{ color: $portfolio-summary-border-color; }
+}
+
+#fsd-recent-activity {
+    border-top: 6px solid $recent-activity-border-color;
+
+    h4 { color: $recent-activity-border-color; }
+
+    i { 
+        color: $dashboard-card-content-th-color;
+
+        &.fsd-yellow {
+            color: $recent-activity-border-color;
+        }
+    }
+
+}
+
+.fsd-create-new-activity label {
+    font-size:.8em;
+    padding-top:.8em;
+}
+
+#fsd-life-experience-inventory {
+    border-top: 6px solid $life-experience-inventory-border-color;
+
+    i, h4 { color: $life-experience-inventory-border-color; }
+
+    span { margin-bottom: 1em; }
+}
+
+.fsd-occu-info-panel {
+    background-color: $occupation-info-panel-background-color;
+    -webkit-box-shadow: $occupation-info-panel-drop-shadow;
+    -moz-box-shadow: $occupation-info-panel-drop-shadow;
+    box-shadow: $occupation-info-panel-drop-shadow;
+    padding: 5px;
+    border: 1px solid $occupation-info-panel-border-color;
+    
+    .bright-future-score-number {
+        color: $white;
+    }
+    
+    .occu-pnl-education-req {
+        border-left: $occu-pnl-education-req-border-left;
+        @include adjust-at-width($break-lg) {
+            margin-top: 2em;
+            border-left: none;
+            ul {
+                padding: 0px;
+            }
+        }
+    }
+    
+    .occu-extra-info {
+        @include adjust-at-width($break-md) {
+            padding: 0px;
+        }
+    }
+
+    .fsd-dashboard-card {
+        box-shadow: none;
+    }
+
+    .fsd-occu-info-panel {
+        box-shadow: none;
+    }
+
+    &.wizard-collections {
+        background-color: $white;
+    }
+}
+
+.panel-heading .fsd-accordion-toggle:before {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: left;        /* adjust as needed */
+    padding-right:10px;
+    color: $gray-medium-dark;
+ //   margin-left:1.25em
+    
+}
+.panel-heading .fsd-accordion-toggle.collapsed:before {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+
+.panel-heading .accordion-toggle {
+  //  text-indent: -1.25em;
+}
+
+a.fsd-cpl-summary-affirmative {
+    color: $green;
+}
+
+a.fsd-cpl-summary-negative {
+    color: $gray-medium-dark;
+}
+
+.fsd-mobile-side-menu {
+    @include adjust-at-width($break-lg) {
+        margin-right: 50px !important;
+        position:absolute;
+        z-index: 500;
+        padding-left: 0px !important;
+       .fsd-occu-info-panel  {
+        display:none;
+
+        &.fsd-slide-menu-open {
+            display: inline-block;
+            }
+        }
+    }
+
+    .fsd-occu-info-panel {
+        /*margin-right: 1em;*/
+        background-color: $white;
+        /*box-shadow: none;*/
+        border: none;
+        padding: 0px;
+    }
+
+    > div > button {
+        background-color: #f9f9f9;
+        border: 1px solid #004b75;
+        color: #004b75;
+        height:40px;
+        width:40px;
+        position:absolute;
+        top: 0px;
+        right: -15px;
+        z-index: 999;
+        border-radius: 50%;
+    }
+}
+
+.panel {
+    border-radius: 0px;
+}

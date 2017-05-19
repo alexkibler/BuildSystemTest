@@ -1,0 +1,177 @@
+/* VARIABLES
+============================================== */
+$text-info-color: $white;
+
+$italic: 'open_sansitalic', sans-serif;
+$bold: 'open_sansbold', sans-serif;
+$regular: 'open_sansregular', sans-serif;
+
+$h1h2-regular: 'open_sanslight', sans-serif;
+$h1h2-bold: 'open_sans_condensedbold', sans-serif;
+
+$display-heading-font: 'chunkfive', 'serif';
+
+$help-text-color: red;
+$invalid-text-color: red;
+
+$incomplete-text-color: #e04462;
+
+/* FONT COLORS
+============================================== */
+
+.fsd-white { color: $white; }
+
+.fsd-purple-dk { color: $purple-dark; }
+.fsd-purple-md { color: $purple-medium; }
+.fsd-purple-md-lt { color: $purple-medium-light; }
+.fsd-purple-lt { color: $purple-light; }
+
+.fsd-green { color: $green; }
+
+.fsd-yellow { color: $yellow; }
+
+.fsd-orange { color: $orange; }
+.fsd-orange-red { color: $orange-red; }
+
+.fsd-red { color: $red;}
+
+.fsd-gray { color: $gray-medium-dark; }
+.fsd-gray-lt { color: $gray-light; }
+
+.fsd-primary-color { color: $primary-color; }
+.fsd-primary-shade-dk { color: $primary-shade-dark; }
+.fsd-primary-shade-md { color: $primary-shade-medium; }
+.fsd-primary-shade-lt { color: $primary-shade-light; }
+
+.fsd-secondary-color { color: $secondary-color; }
+.fsd-secondary-shade { color: $secondary-shade; }
+
+/* FONTS
+============================================= */
+
+@include font-face('open_sansregular', '../font/open-sans/opensans-regular-webfont', normal, normal);
+@include font-face('open_sans_condensedbold', '../font/open-sans-condensed/opensans-condbold-webfont', normal, normal);
+@include font-face('open_sanscondensed_light', '../font/open-sans-condensed/opensans-condlight-webfont', normal, normal);
+@include font-face('open_sansitalic', '../font/open-sans-italic/opensans-italic-webfont', normal, normal);
+@include font-face('open_sanslight_italic', '../font/open-sans-italic/opensans-lightitalic-webfont', normal, normal);
+@include font-face('open_sansbold', '../font/open-sans-bold/opensans-bold-webfont', normal, normal);
+@include font-face('open_sanslight', '../font/open-sans-light/opensans-light-webfont', normal, normal);
+@include font-face('chunkfive', '../font/chunkfive-webfont/chunk-webfont', normal, normal);
+
+
+h1, h2 { 
+    font-family: #{$h1h2-regular};
+//    text-transform: uppercase;
+    line-height: normal;
+
+    .fsd-bold { font-family: #{$h1h2-bold} }
+}
+//h1 { font-size: 3em; }
+//h2 { font-size: 2.5em; }
+//h3 {
+//    font-size: 1.6em;
+//    line-height: normal;
+//}
+//h4 {
+//    font-size: 1.3em;
+//    line-height: normal;
+//}
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; }
+h3 {
+    font-size: 2em;
+    line-height: normal;
+}
+h4 {
+    font-size: 1.5em;
+    line-height: normal;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+//    padding-bottom: 1em;
+
+    &.fsd-bigger-p-text {
+        font-size: 1.2em;
+    }
+    &.fsd-smaller-p-text {
+        font-size: .8em;
+    }
+}
+
+i{
+    font-size: 1em;
+
+    &.fsd-smaller-i-text{
+        font-size: .6em !important;
+    }
+}
+
+.fsd-italic { font-family: #{$italic} }
+.fsd-bold { font-family: #{$bold} }
+.fsd-regular { font-family: #{$regular} }
+.fsd-regular-case { text-transform: none; }
+.fsd-underline { text-decoration: underline; }
+.fsd-status-text{ 
+    font-size: 1.2em;
+    line-height:1.5em;
+}
+.fsd-slightly-bigger-text {
+    font-size: 1.1em;
+}
+.fsd-bigger-text {
+    font-size: 1.2em;
+}
+.text-info{
+    color: $text-info-color;
+    text-decoration: none;
+}
+
+p.help-text {
+    margin: 0 0 10px 0;
+    color: $help-text-color;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0;
+}
+
+p.help-text-big {
+    margin: 10px 0 10px 0;
+    color: $help-text-color;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0;
+}
+
+em.warning-text { line-height: 2.5em; }
+
+input.invalid, textarea.invalid { border-color: $invalid-text-color; }
+
+.fsd-incomplete {
+    font-size: inherit;
+    color: $incomplete-text-color;
+}
+
+.carousel-caption h2{
+    font-size:2.5em;
+    text-shadow: 6px 6px 10px rgba(0,0,0,.5);
+    @include adjust-at-width($break-lg) { font-size: 1.8em; }
+    @include adjust-at-width($break-md) { font-size: 1.1em; }
+    @include adjust-at-width($break-sm) { font-size: 1.1em; }
+}
+
+
+/* uppercase all trend report chart legend text since data isnt formatted */
+#trend-chart .dc-legend-item text{
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+#unregistered-user-chart .dc-legend-item text{
+    font-size: 12px;
+}
+
+.dc-chart .pie-slice{
+    font-size: 14px !important;
+}

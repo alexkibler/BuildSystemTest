@@ -1,0 +1,44 @@
+/* VARIABLES
+===========================================*/
+$who-benifits-image: '../images/handwriting.jpg';
+//$big-circle-icon-holder-border-color: $primary-shade-dark;
+//$big-circle-icon-holder-icon-color: $primary-shade-dark;
+//$big-circle-icon-holder-backgorund-color: $white;
+$big-circle-icon-holder-border-color: $white;
+$big-circle-icon-holder-icon-color: $white;
+$big-circle-icon-holder-backgorund-color: $primary-shade-dark;
+
+/* DECLARATIONS
+===========================================*/
+img.fsd-img-who-benifits {
+    content: url('#{$who-benifits-image}');
+    @include adjust-at-width($break-lg) {
+        content: url(../images/handwriting-wide.jpg);
+        margin: 0 auto;
+    }
+}
+
+.fsd-big-circle-icon-holder {
+    background-color: $big-circle-icon-holder-backgorund-color;
+    border: 4px solid $big-circle-icon-holder-border-color;
+    height: 14em;
+    width: 14em;
+    overflow: hidden;
+    padding-top: 2em;
+    @include adjust-at-width($break-md) {
+        border: 4px solid $big-circle-icon-holder-border-color;
+        height: 8em;
+        width: 8em;
+        overflow: hidden;
+        padding-top: 1em;
+    }
+
+    i {
+        color: $big-circle-icon-holder-icon-color;
+        font-size: 9em;
+        @include adjust-at-width($break-md) {
+            font-size: 5em;
+        }
+    }
+}
+ 

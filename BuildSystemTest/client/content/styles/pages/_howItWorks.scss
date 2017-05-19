@@ -1,0 +1,51 @@
+/* VARIABLES
+===========================================*/
+$how-it-works-icon-color: $primary-color;
+$how-it-works-border-color: $yellow;
+
+/* DECLARATIONS
+===========================================*/
+.fsd-blue { color: $how-it-works-icon-color; }
+
+.fsd-how-it-works-svg-holder {
+    position: relative;
+    left: 40px;
+    @include adjust-at-width($break-sm) {
+        position: relative;
+        left: 30px;
+    }
+
+    img {
+        border: 6px solid $how-it-works-border-color;
+        position: relative;
+        left: -80px;
+        top: 15px;
+        @include adjust-at-width($break-sm) {
+            border: 3px solid $how-it-works-border-color;
+            position: relative;
+            left: -50px;
+            top: 15px;
+        }
+    }
+}
+
+.fsd-how-it-works-panels {
+    i {
+        font-size: 6em;
+        @include adjust-at-width($break-md) { font-size: 4em; }
+        @include adjust-at-width($break-sm) { font-size: 3em; }
+    }
+}
+
+/* SVG */
+.path {
+    stroke-dasharray: 1650;
+    stroke-dashoffset: 1650;
+    animation: dash 2s ease-in-out forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

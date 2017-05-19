@@ -1,0 +1,44 @@
+﻿/* VARIABLES
+===========================================*/
+$radio-button-label-before-background-color: $gray-extra-light;
+$radio-button-label-before-border-color: $gray-medium;
+$radio-button-label-checked-before-background-color: $white;
+$radio-button-checked-label-before-box-shadow-color: #4c5d7f;
+
+
+/* DECLARATIONS
+===========================================*/
+.fsd-radio {
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+
+    &+ label {
+        position: relative;
+        padding: 5px 0;
+
+        &:before {
+            content: '';
+            background: $radio-button-label-before-background-color;
+            border: 1px solid $radio-button-label-before-border-color;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 2px;
+            margin-right: 10px;
+            text-align: right;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+        }
+    }
+
+    &:checked + label:before {
+        background: $radio-button-label-checked-before-background-color;
+        box-shadow: inset 0px 0px 0px 5px $radio-button-checked-label-before-box-shadow-color;
+        height: 18px;
+        width: 18px;
+    }
+}

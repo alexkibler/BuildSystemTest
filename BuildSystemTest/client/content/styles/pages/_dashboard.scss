@@ -1,0 +1,19 @@
+﻿/* VARIABLES
+===========================================*/
+$status-circle-font-color: $white;
+
+/* DECLARATIONS
+===========================================*/
+.fsd-status-circle{
+    border-radius: 50%;
+    font-size: 2.5em;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    color: $status-circle-font-color;
+    padding-top: 4px;
+}
+
+.fsd-no-hand{
+    cursor: default;
+}

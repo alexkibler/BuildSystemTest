@@ -1,0 +1,53 @@
+/* VARIABLES
+===========================================*/
+$admin-navbar-bg-color: $purple-medium;
+$admin-navbar-text-color: $white;
+$admin-navbar-hover-color: $white;
+$forgot-password-link-text-color: $secondary-shade;
+
+/* DECLARATIONS
+===========================================*/
+.fsd-admin-navbar {
+    background-color: $admin-navbar-bg-color;
+
+    .navbar-nav { padding-top: 15px; }
+
+    ul li a, ul li span {
+        color: $admin-navbar-text-color;
+        text-shadow: none;
+        font-size: 1.2em;
+    }
+
+    .nav > li a:hover, .nav li > a:focus {
+        background-color: $admin-navbar-hover-color !important;
+        color: $admin-navbar-text-color;
+    }
+
+    .dropdown-menu {
+        background-color: $admin-navbar-bg-color;
+
+        > li:hover {
+            background-color: $admin-navbar-hover-color;
+        }
+    }
+}
+
+.navbar-brand {
+    padding: 0;
+    height: auto;
+    color: $admin-navbar-text-color;
+
+    img { width: 80px; }
+}
+
+nav .navbar-nav {
+    float: right;
+    @include adjust-at-width($break-md) { float: none; }
+}
+
+/* the parent li when the dropdown is opened */
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background-color: $admin-navbar-hover-color !important; }
+
+.nav li{
+    @include adjust-at-width($break-md){ clear: both; }
+}

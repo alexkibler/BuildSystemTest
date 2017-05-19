@@ -1,0 +1,20 @@
+﻿/* VARIABLES
+===========================================*/
+$btn-text-color: $primary-shade-dark;
+$btn-bg-color-hover: $white;
+$btn-text-color-hover: $primary-color;
+
+/* DECLARATIONS
+===========================================*/
+#logout-btn, #login-btn {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: $btn-text-color;
+
+    &:hover {
+        background-color: $btn-bg-color-hover;
+        color: $btn-text-color-hover;
+        text-decoration: none;
+    }
+}

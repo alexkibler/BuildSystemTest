@@ -1,0 +1,173 @@
+/* VARIABLES
+============================================== */
+$note-bg-border-color: #999;
+
+$periwinkle-bg-color: #80c9e9;
+$periwinkle-text-color: $white;
+
+$fsd-gray-extra-light-bg-color: $gray-extra-light;
+
+/* DECLARATIONS
+============================================== */
+/* Resets */
+button { outline: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { 
+    line-height: normal; 
+    font-family: 'open_sansregular', sans-serif;
+}
+
+body, p, span { font-size:14px; }
+
+blockquote, q { 
+    quotes: none;
+
+    &:before, &:after {
+        content: '';
+        content: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clean {
+    margin: 0;
+    padding: 0;
+}
+
+.nav, .pagination, .panel-title a, a { cursor: pointer; }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus { background-image: none !important; }
+
+.fsd-cursor-point:hover{ cursor: pointer; }
+
+#preload {
+    display: none;
+}
+
+/* SCROLL VISIBILITY */
+
+body {
+    overflow-y:scroll;
+}
+
+/* BG COLORS */
+.fsd-note-bg { border-top: 1px $note-bg-border-color solid; }
+.fsd-note-icon { font-size: 1em !important; }
+
+.fsd-gray-extra-light-bg {
+    background-color: $fsd-gray-extra-light-bg-color;
+}
+
+.fsd-white-bg { background-color: $white; }
+
+.fsd-yellow-bg { background-color: $yellow; }
+
+.fsd-orange-bg { background-color: $orange; }
+.fsd-orange-red-bg { background-color: $orange-red; }
+
+.fsd-periwinkle-bg {
+    background-color: $periwinkle-bg-color;
+    color: $periwinkle-text-color;
+}
+
+.fsd-purple-md-lt-bg {
+    background-color: $purple-medium-light;
+    color: $white;
+}
+
+.fsd-secondary-color-bg {
+    background-color: $secondary-color;
+    color: $white;
+}
+
+.fsd-secondary-shade-bg {
+    background-color: $secondary-shade;
+    color: $primary-shade-dark;
+}
+
+.fsd-secondary-color-border-bottom {
+    border-bottom: 2px solid $secondary-color;
+}
+.fsd-secondary-shade-border-bottom {
+    border-bottom: 2px solid $secondary-shade;
+}
+
+.fsd-primary-color-bg {
+    background-color: $primary-color;
+    color: $white;
+}
+
+.fsd-primary-shade-dk-bg {
+    background-color: $primary-shade-dark;
+    color: $white;
+    a {
+        color: $secondary-shade;
+    }
+    /*em {
+        color: $secondary-shade;
+    }*/
+}
+
+.fsd-primary-shade-lt-bg {
+    background-color: $primary-shade-light;
+    color: $white;
+}
+
+.fsd-primary-shade-md-bg {
+    background-color: $primary-shade-medium;
+    color: $white;
+}
+
+.fsd-primary-color-border-bottom {
+    border-bottom: 2px solid $primary-color;
+}
+.fsd-primary-color-border {
+    border: 2px solid $primary-color;
+}
+
+.fsd-primary-shade-border-bottom {
+    border-bottom: 2px solid $primary-shade-dark;
+}
+.fsd-primary-shade-border {
+    border: 2px solid $primary-shade-dark;
+}
+
+.fsd-gray-medium-border-left {
+    border-left: 2px solid $gray-medium;
+}
+
+.fsd-dk-blue-bg {
+    background-color: #004b75;
+    color: $white;
+}
+
+.fsd-md-blue-bg {
+    background-color: #007ac2;
+    color: $white;
+}
+
+.fsd-md-lt-blue-bg {
+    background-color: #279bd6;
+    color: $white;
+}
+
+.fsd-lt-blue-bg {
+    background-color: #8ed6ff;
+    color: #004b75;
+}
+
+.fsd-green-bg {
+    background-color: $green;
+    color: $white;
+}
+
+.fsd-green-dk-bg { 
+    background-color:  $green-dark;
+    color: $white;
+}

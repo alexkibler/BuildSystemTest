@@ -1,0 +1,29 @@
+﻿/* VARIABLES
+===========================================*/
+$email-input-border-color: $primary-color;
+$email-input-background-color: $white; 
+
+/* DECLARATIONS
+===========================================*/
+
+.input-group {
+    &.fsd-email-input-group {
+        max-width: 400px;
+        input.form-control {
+            background-color: $email-input-background-color;
+            border-radius: 0px;
+            border-color: $email-input-border-color;
+        }
+        .input-group-addon {
+            border-radius: 0px;
+            background-color: $email-input-border-color;
+            border-color: $email-input-border-color;
+
+            button {
+                color: $email-input-background-color;
+                border: none;
+                background-color: $email-input-border-color;
+            }
+        }
+    }
+}

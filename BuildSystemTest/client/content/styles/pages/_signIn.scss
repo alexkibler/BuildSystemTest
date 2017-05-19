@@ -1,0 +1,23 @@
+/* VARIABLES
+===========================================*/
+
+
+/* DECLARATIONS
+===========================================*/
+
+.sign-in-card-holder {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include adjust-at-width($break-md) {
+        
+    }
+    @include adjust-at-width($break-sm) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.sign-in-card {
+
+}

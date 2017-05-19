@@ -1,0 +1,63 @@
+﻿/* VARIABLES
+===========================================*/
+
+
+/* DECLARATIONS
+===========================================*/
+
+
+.fsd-labormarketinfo {
+    accordion {
+        &.fsd-occu-info-panel {
+            background-color: none;
+        }
+        .panel {
+            border: none;
+            border-radius: 0px;
+            background-color: $gray-extra-light;
+        }
+        .panel.panel-default {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 0px;
+            margin-bottom: 1em;
+
+            .panel-heading {
+                border:none;             
+                /*margin: 0px 1em;*/
+                color: $primary-shade-dark;
+
+                i {
+                    margin-left: -.5em;
+                }
+
+                .bright-future-score-number {
+                    color: $white;
+                }
+            }
+        }
+        .panel-heading {
+            .accordion-toggle {
+
+                outline: none;
+
+                &:before {
+                    content: none;
+                    padding: 0px;
+                    float: none;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+                &:focus {
+                    text-decoration: none;
+                }
+                &:active {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    h4.panel-title {
+         font-size: 1.5em;
+    }
+}

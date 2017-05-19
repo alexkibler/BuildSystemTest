@@ -1,0 +1,17 @@
+﻿/* VARIABLES
+===========================================*/
+$busy-text-color: #5D5D5D;
+
+/* DECLARATIONS
+===========================================*/
+.cg-busy-default-sign {
+    min-height: 50px;
+    border-radius: 25%;
+    text-shadow: none;
+}
+
+.cg-busy-default-text {
+    margin: 5px 12px 6px 12px;
+    text-shadow: none;
+    color: $busy-text-color;
+}

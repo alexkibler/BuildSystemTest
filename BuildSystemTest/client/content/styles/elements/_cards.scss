@@ -1,0 +1,107 @@
+/* VARIABLES
+===========================================*/
+$wizard-card-background-color: $white;
+$wizard-card-border-color: $gray-extra-light;
+$wicard-card-drop-shadow: 10px 10px 9px -6px rgba(181,181,181,1);
+
+$dashboard-card-admin-grid-border-color: $purple-medium;
+
+
+/* DECLARATIONS
+===========================================*/
+.fsd-wizard-card {
+    background-color: $wizard-card-background-color;
+    -webkit-box-shadow: $wicard-card-drop-shadow;
+    -moz-box-shadow: $wicard-card-drop-shadow;
+    box-shadow: $wicard-card-drop-shadow;
+    padding: 40px 80px;
+    border: 1px solid $wizard-card-border-color;
+}
+
+.fsd-dashboard-card.fsd-admin-grid {
+    border-top: 6px solid $dashboard-card-admin-grid-border-color;
+}
+
+.fsd-dashboard-card.fsd-admin-grid h4 {
+    color: $dashboard-card-admin-grid-border-color;
+}
+
+.fsd-dashboard-card.fsd-admin-grid i {
+    color: $dashboard-card-admin-grid-border-color;
+}
+.fsd-dashboard-card.fsd-admin-grid tbody i:first-of-type {
+    padding-left:0px;
+}
+
+.fsd-dashboard-card.fsd-admin-grid label {
+    padding-top:.8em;
+}
+
+.fsd-dashboard-card.fsd-admin-grid tr {
+    height:2em;
+}
+.fsd-dashboard-card.fsd-admin-grid td {
+    line-height:1.4em;
+}
+.fsd-dashboard-card.fsd-admin-grid td a i  {
+    font-size:2em;
+    padding-left:.5em;
+    padding-right:.5em;
+}
+
+.fsd-dashboard-card {
+   @include adjust-at-width($break-md) { padding: .8em; } 
+}
+
+.fsd-dashboard-card-content  {
+   @include adjust-at-width($break-md) { font-size: .8em; }
+}
+
+.fsd-dashboard-card-content i {
+    @include adjust-at-width($break-md) { font-size: 2em; }
+}
+
+#fsd-recent-activity .fsd-dashboard-card-content td i {
+    @include adjust-at-width($break-md) { font-size: 1.5em; }
+}
+
+/* iPhone6 and below */
+
+.fsd-dashboard-card p {
+    @include adjust-at-width($break-sm) { font-size: .8em; }
+}
+
+.fsd-dashboard-card-content th, .fsd-dashboard-card-content td {
+    @include adjust-at-width($break-sm) { font-size: .8em; }
+}
+
+.fsd-dashboard-card-content td i {
+    @include adjust-at-width($break-sm) { font-size: 3em; }
+}
+
+.fsd-wizard-card {
+    @include adjust-at-width($break-sm) {
+        background-color: $wizard-card-background-color;
+        -webkit-box-shadow: $wicard-card-drop-shadow;
+        -moz-box-shadow: $wicard-card-drop-shadow;
+        box-shadow: $wicard-card-drop-shadow;
+        padding: 40px 10px;
+        border: 1px solid $wizard-card-border-color;
+    }       
+}
+
+.fsd-carrot-card {
+    background-color: $wizard-card-background-color;
+    -webkit-box-shadow: $wicard-card-drop-shadow;
+    -moz-box-shadow: $wicard-card-drop-shadow;
+    box-shadow: $wicard-card-drop-shadow;
+    padding: 20px;
+    border: 1px solid $wizard-card-border-color;
+}
+a {
+    .fsd-carrot-card{
+    &:hover {
+        text-decoration: none;
+    }
+}
+}

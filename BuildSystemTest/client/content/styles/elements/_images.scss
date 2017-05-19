@@ -1,0 +1,11 @@
+﻿/* VARIABLES
+===========================================*/
+$image-box-shadow: $drop-shadow-light;
+
+/* DECLARATIONS
+===========================================*/
+
+
+img.fsd-img {
+    box-shadow: $image-box-shadow;
+}

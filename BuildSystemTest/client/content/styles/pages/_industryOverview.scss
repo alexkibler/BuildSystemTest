@@ -1,0 +1,152 @@
+﻿/* VARIABLES
+===========================================*/
+$industry-overview-image-font-color: $white;
+
+$advanced-manufacturing-image: '../images/advanced-manufacturing.jpg';
+$advanced-manufacturing-font-color: $yellow;
+$advanced-manufacturing-th-font-color: $white;
+
+$information-technology-image: '../images/info-tech.jpg';
+$information-technology-font-color: $green;
+$information-technology-th-font-color: $white;
+
+$clean-energy-image: '../images/clean-energy.jpg';
+$clean-energy-font-color: $blue-light;
+$clean-energy-th-font-color: $white;
+
+/* DECLARATIONS
+===========================================*/
+.fsd-industry-overview-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 125px;
+    overflow: hidden;
+    text-align: center;
+    padding: 0px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include adjust-at-width($break-xl) { 
+        height: 180px;
+        width: 180px;
+        border-radius: 90px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    h5{
+        color: $industry-overview-image-font-color;
+        padding: 10px;
+        position: relative;
+        top: 150px;
+        left: -250px;
+        transition: all .25s ease-in;
+        @include adjust-at-width($break-xl) { 
+            font-size: 1em;
+            top: 100px;
+            left: -180px;
+        }
+    }
+}
+
+.fsd-advanced-manufacturing {
+    border: 6px solid $advanced-manufacturing-font-color;
+    background-image: url('#{$advanced-manufacturing-image}');
+
+    h5{
+        background-color: $advanced-manufacturing-font-color;
+        border-bottom: 60px solid $advanced-manufacturing-font-color;
+    }
+
+    &:hover h5{
+        border-bottom: 60px solid $advanced-manufacturing-font-color;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.fsd-information-technology {
+    border: 6px solid $information-technology-font-color;
+    background-image: url('#{$information-technology-image}');
+
+    h5{
+        background-color: $information-technology-font-color;
+        border-bottom: 60px solid $information-technology-font-color;
+    }
+
+    &:hover h5{
+        border-bottom: 60px solid $information-technology-font-color;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+.fsd-clean-energy {
+    border: 6px solid $clean-energy-font-color;
+    background-image: url('#{$clean-energy-image}');
+
+    h5{
+        background-color: $clean-energy-font-color;
+        border-bottom: 60px solid $clean-energy-font-color;
+    }
+
+    &:hover h5{
+        border-bottom: 60px solid $clean-energy-font-color;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* TODO - replace with vars */
+.fsd-industry-overview th, .fsd-industry-overview td { padding: 5px; }
+
+.fsd-industry-overview{
+
+    &.fsd-adv-mfrg {
+        border: 2px solid $advanced-manufacturing-font-color;
+
+        th {
+            color: $advanced-manufacturing-th-font-color;
+            background-color: $advanced-manufacturing-font-color;
+        }
+
+         td:nth-child(2) {
+            text-align: center;
+        }
+    }
+    
+    &.fsd-i-t {
+        border: 2px solid $information-technology-font-color;
+
+        th {
+            color: $information-technology-th-font-color;
+            background-color: $information-technology-font-color;
+        }
+
+        td:nth-child(2) {
+            text-align: center;
+        }
+    }
+
+    &.fsd-energy {
+        border: 2px solid $clean-energy-font-color;
+
+        th {
+            color: $clean-energy-th-font-color;
+            background-color: $clean-energy-font-color;
+        }
+
+        td:nth-child(2) {
+            text-align: center;
+        }
+    }
+}
+
+.fsd-mobile-remove-margins {
+    @include adjust-at-width($break-md) { margin: 0px; }       
+}

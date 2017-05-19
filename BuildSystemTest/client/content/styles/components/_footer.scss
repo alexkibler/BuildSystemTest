@@ -1,0 +1,32 @@
+/* VARIABLES
+===========================================*/
+$footer-bg-color: $gray-extra-dark;
+$footer-text-color: $white;
+
+/* DECLARATIONS
+===========================================*/
+footer.fsd-footer {
+    background-color: $footer-bg-color;
+    color: $footer-text-color;
+
+    hr {
+        border-top: 1px solid #666;
+    }
+}
+
+footer {
+    img {
+        margin:0px auto 10px auto;
+        width:130px;
+        height: auto;
+    }
+    a {
+        color: $footer-text-color;
+        text-decoration: underline;
+    }
+    .list-inline {
+        li {
+             padding-top: .5em;
+        }
+    }
+}

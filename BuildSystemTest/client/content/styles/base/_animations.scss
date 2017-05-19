@@ -1,0 +1,59 @@
+﻿/* PULSE
+===========================================*/
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+.ng-enter { z-index: 8888; }
+.ng-leave { z-index: 9999; }
+
+.view.ng-enter { animation: fadeIn 0.5s; }
+
+.view.ng-leave.ng-leave-stagger { transition-delay: 0.25s; }
+.view.ng-leave.ng-leave-active { animation: fadeOut 0.5s; }
+
+.step.ng-hide-remove { animation: fadeIn 0.5s; }
+.step.ng-hide-add { animation: fadeOut 0.1s; }
+
+.fa-spin {
+    -webkit-animation: fa-spin 5s infinite linear;
+    animation: fa-spin 5s infinite linear;
+}
+
+.fa-spin-slow {
+    -webkit-animation: fa-spin 5s infinite ease-in-out;
+    animation: fa-spin 5s infinite ease-in-out;
+}

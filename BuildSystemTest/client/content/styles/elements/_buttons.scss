@@ -1,0 +1,403 @@
+/* VARIABLES
+===========================================*/
+$fsd-standard-btn-color: $white;
+$fsd-standard-btn-background: $primary-color;
+
+$get-started-btn-color: $secondary-color;
+$get-started-btn-text-color: $white;
+
+$update-btn-color: $purple-medium;
+$update-btn-text-color: $white;
+
+$password-btn-color: $purple-medium;
+$password-btn-text-color: $white;
+$password-btn-disabled-color: $gray-light;
+
+$login-btn-color: $secondary-shade;
+$login-btn-text-color: $primary-shade-dark;
+$login-btn-active-border-color: $gray-light;
+
+$btn-drop-shadow: $drop-shadow-light;
+$btn-active-drop-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+
+$status-btn-background-color: $white;
+$status-btn-border-color: $gray-medium;
+
+$upload-btn-background-color: $purple-medium;
+$upload-btn-font-color: $white;
+$upload-btn-active-border-color: $gray-medium-light;
+
+$student-profile-btn-background-color: $green;
+$student-profile-btn-font-color: $white;
+$student-profile-btn-active-border-color: $gray-medium-light;
+
+$recent-activity-btn-background-color: $yellow;
+$recent-activity-btn-font-color: $white;
+$recent-activity-btn-active-border-color: $gray-medium-light;
+
+$student-account-info-btn-background-color: $orange;
+$student-account-info-btn-font-color: $white;
+$student-account-info-btn-active-border-color: $gray-medium-light;
+
+$portfolio-summary-btn-background-color: $blue-light;
+$portfolio-summary-btn-font-color: $white;
+$portfolio-summary-btn-active-border-color: $gray-medium-light;
+
+$admin-grid-btn-background-color: $purple-medium;
+$admin-grid-btn-font-color: $white;
+$admin-grid-btn-active-border-color: $gray-medium-light;
+
+$fsd-button-primary-disabled-color: $gray-medium-dark;
+$fsd-button-primary-disabled-bg-color: $gray-light;
+$fsd-button-primary-bg-color: $primary-color;
+$fsd-button-primary-hover-bg-color: $primary-shade-dark;
+$fsd-button-primary-color: $white;
+
+/* DECLARATIONS
+===========================================*/
+%button { padding:.5em 1.5em; border-radius: 0px;}
+
+.fsd-btn {
+    border-radius: 0px;
+    box-shadow: $btn-drop-shadow;
+    color: $fsd-standard-btn-color;
+    background-color: $fsd-standard-btn-background;
+    border-color: $fsd-standard-btn-background;
+    
+    &:hover {
+        background-color: $fsd-standard-btn-color;
+        color: $fsd-standard-btn-background;
+    }
+
+    &:focus {
+        color: white
+    }
+}
+
+.fsd-btn-inverse {
+    color: $fsd-standard-btn-background;
+    background-color: $fsd-standard-btn-color;
+    border-color: $fsd-standard-btn-background;
+   // border-radius:0px;
+    &:hover {
+        background-color: $fsd-standard-btn-background;
+        color: $fsd-standard-btn-color;
+    }
+}
+
+.fsd-btn-inverse-square {
+    color: $fsd-standard-btn-background;
+    background-color: $fsd-standard-btn-color;
+    border-color: $fsd-standard-btn-background;
+    border-radius:0px;
+    &:hover {
+        background-color: $fsd-standard-btn-background;
+        color: $fsd-standard-btn-color;
+    }
+
+}
+
+.fsd-prev-next-btn {
+    min-width: 100px;
+}
+
+.fsd-get-started-btn {
+    color: $get-started-btn-text-color;
+    background-color: $get-started-btn-color;
+    border: 1px solid $get-started-btn-color;
+    box-shadow: $btn-drop-shadow;
+    font-size: 1.8em;
+    padding: .5em 1em;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-out;
+
+    &:hover {
+        background-color: $get-started-btn-text-color;
+        color: $get-started-btn-color;
+    }
+    &:active {
+        box-shadow: $btn-active-drop-shadow;
+    }
+}
+
+.fsd-update-add-btn {
+    color: $update-btn-text-color;
+    background-color: $update-btn-color;
+    border: 1px solid $update-btn-color;
+    box-shadow: $btn-drop-shadow;
+    font-size: 1.4em;
+    padding: .5em 1em;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-out;
+
+    &:hover {
+        background-color: $update-btn-text-color;
+        color: $update-btn-color;
+    }
+}
+
+.fsd-pw-btn {
+    @extend %button;
+    &:enabled{
+        color: $password-btn-text-color;
+        background-color: $password-btn-color;
+        border:1px solid $password-btn-text-color;
+        -webkit-transition:all .2s;
+        transition:all .2s;
+
+        &:hover {
+            background-color: $password-btn-text-color;
+            color: $password-btn-color;
+            border:1px solid $password-btn-color;
+        }
+    }
+    &:disabled {
+        border: 1px solid $password-btn-disabled-color;
+        color: $password-btn-disabled-color;
+        background-color: $password-btn-color;
+
+        &:hover {
+            border: 1px solid $password-btn-disabled-color;
+            color: $password-btn-disabled-color;
+            background-color: $password-btn-color;
+            -webkit-transition: none;
+            transition: none;
+            cursor: not-allowed;
+        }
+    }
+}
+
+#fsd-btnLogin {
+    border: 1px solid $login-btn-color;
+    background: $login-btn-color;
+    color: $login-btn-text-color;
+    padding: .5em 1em;
+    box-shadow: $btn-drop-shadow;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    border-radius: 0;
+
+    &:hover {
+        color: $login-btn-color;
+        background: $login-btn-text-color;
+    }
+
+    &:active {
+        color: $login-btn-color;
+        background: $login-btn-text-color;
+        box-shadow: $btn-active-drop-shadow;
+        border: 1px solid $login-btn-active-border-color;
+    }
+}
+
+.fsd-delete-btn {
+    background-color: #ffffff;
+    border: 1px solid #ad0931;
+    color: #ad0931;
+}
+
+/* TODO - replace with vars */
+.fsd-status-btn{
+    @extend %button;
+    background-color: $status-btn-background-color;
+    border: 2px solid $status-btn-border-color;
+    min-width: 175px;
+}
+
+.fsd-upload-btn {
+    border: 1px solid $upload-btn-background-color;
+    background: $upload-btn-background-color;
+    color: $upload-btn-font-color;
+    padding: .5em 1em;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    border-radius: 0;
+
+    &:hover {
+        color: $upload-btn-background-color;
+        background: $upload-btn-font-color;
+    }
+
+    &:active {
+        color: $upload-btn-background-color;
+        background: $upload-btn-font-color;
+        border: 1px solid $upload-btn-active-border-color;
+    }
+}
+
+/* student profile open lei btn - naming pls */
+#fsd-student-profile button {
+    @extend %button;
+    border: 1px solid $student-profile-btn-background-color;
+    color: $student-profile-btn-background-color;
+    background: $student-profile-btn-font-color;
+    box-shadow: $btn-drop-shadow;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+
+    &:hover {
+        background: $student-profile-btn-background-color;
+        color: $student-profile-btn-font-color;
+    }
+
+    &:active {
+        background: $student-profile-btn-background-color;
+        color: $student-profile-btn-font-color;
+        box-shadow: $btn-active-drop-shadow;
+        border: 1px solid $student-profile-btn-active-border-color;
+    }
+}
+
+/* activity panel add button */
+#fsd-recent-activity button {
+    @extend %button;
+    margin-top:1em;
+    margin-bottom:2em;  
+    border: 1px solid $recent-activity-btn-background-color;
+    background: $recent-activity-btn-background-color;
+    color: $recent-activity-btn-font-color;
+    box-shadow: $btn-drop-shadow;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+
+    &:hover {
+        background: $recent-activity-btn-background-color;
+        color: $recent-activity-btn-font-color;
+        color: $recent-activity-btn-background-color;
+        background: $recent-activity-btn-font-color;
+    }
+
+    &:active { 
+        color: $recent-activity-btn-background-color;
+        background: $recent-activity-btn-font-color;
+        box-shadow: $btn-active-drop-shadow;
+        border: 1px solid $recent-activity-btn-active-border-color;
+    }
+}
+
+.find-colleges-btn {
+    border: none;
+    background-color: $fsd-button-primary-bg-color;
+    color: $fsd-button-primary-color;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-out;
+
+    &:focus {
+        color: $fsd-button-primary-color;
+    }
+
+    &:hover {
+        background-color: $fsd-button-primary-hover-bg-color;
+        color: $fsd-button-primary-color;
+    }
+
+    &:disabled {
+        color: $fsd-button-primary-disabled-color;
+        background-color: $fsd-button-primary-disabled-bg-color;
+
+        &:hover {
+            background-color: $fsd-button-primary-disabled-bg-color;
+        }
+    }
+}
+
+.confirm-college-btn {
+    border: none;
+    background-color: $fsd-button-primary-bg-color;
+    color: $fsd-button-primary-color;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-out;
+
+    &:focus {
+        color: $fsd-button-primary-color;
+    }
+
+    &:hover {
+        background-color: $fsd-button-primary-hover-bg-color;
+        color: $fsd-button-primary-color;
+    }
+
+    &:disabled {
+        color: $fsd-button-primary-disabled-color;
+        background-color: $fsd-button-primary-disabled-bg-color;
+
+        &:hover {
+            background-color: $fsd-button-primary-disabled-bg-color;
+        }
+    }
+}
+
+/* account mngmt button - i think? */
+#fsd-student-acct-info button {
+    @extend %button;
+    border: 1px solid $student-account-info-btn-background-color;
+    color: $student-account-info-btn-background-color;
+    background: $student-account-info-btn-font-color;
+    box-shadow: $btn-drop-shadow;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+
+    &:hover {
+        background: $student-account-info-btn-background-color;
+        color: $student-account-info-btn-font-color;
+    }
+
+    &:active {
+        background: $student-account-info-btn-background-color;
+        color: $student-account-info-btn-font-color;
+        box-shadow: $btn-active-drop-shadow;
+        border: 1px solid $student-account-info-btn-active-border-color;
+    }
+}
+
+#fsd-portfolio-summary button {
+    border: 1px solid $portfolio-summary-btn-background-color;
+    color: $portfolio-summary-btn-background-color;
+    background: $portfolio-summary-btn-font-color;
+    box-shadow: $btn-drop-shadow;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+
+    &:hover {
+        background: $portfolio-summary-btn-background-color;
+        color: $portfolio-summary-btn-font-color;
+    }
+
+    &:active {
+        background: $portfolio-summary-btn-background-color;
+        color: $portfolio-summary-btn-font-color;
+        box-shadow: $btn-active-drop-shadow;
+        border: 1px solid $portfolio-summary-btn-active-border-color;
+    }
+}
+
+.fsd-dashboard-card.fsd-admin-grid button {
+    @extend %button;
+    margin-top:1em;
+    margin-bottom:2em;  
+    border: 1px solid $admin-grid-btn-background-color;
+    background: $admin-grid-btn-background-color;
+    color: $admin-grid-btn-font-color;
+    box-shadow: $btn-drop-shadow;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+
+    &:hover {
+        background: $admin-grid-btn-background-color;
+        color: $admin-grid-btn-font-color;
+        color: $admin-grid-btn-background-color;
+        background: $admin-grid-btn-font-color;
+    }
+
+    &:active {
+        color: $admin-grid-btn-background-color;
+        background: $admin-grid-btn-font-color;
+        box-shadow: $btn-active-drop-shadow;
+        border: 1px solid $admin-grid-btn-active-border-color;
+    }
+}
+
+//.nav-pills>li>a {
+//    @extend %button;
+//    border-radius: 0;
+//}

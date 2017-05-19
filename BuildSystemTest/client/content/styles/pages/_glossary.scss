@@ -1,0 +1,53 @@
+﻿/* VARIABLES
+===========================================*/
+$glossary-scroll-nav-background-color: $gray-extra-light;
+$glossary-scroll-nav-active-bg-color: $purple-medium;
+$glossary-scroll-nav-link-color: $gray-extra-dark;
+$glossary-scroll-nav-link-hover-color: $gray-medium-light;
+$glossary-scroll-nav-link-active-color: $white;
+
+
+/* DECLARATIONS
+===========================================*/
+.active{
+    text-decoration: underline;
+}
+
+.fsd-glossary-width-fix{
+    width: 60%;
+}
+
+.scroll-nav {
+    background: $glossary-scroll-nav-background-color;
+}
+
+.fsd-affix {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.scroll-nav li, .scroll-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center
+    }
+    .scroll-nav li, .scroll-nav a {
+      display: inline-block;
+    }
+    .scroll-nav a {
+      padding: 10px;
+      color: $glossary-scroll-nav-link-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .scroll-nav a:hover {
+      background: $glossary-scroll-nav-link-hover-color;
+    }
+    .scroll-nav a.active {
+      background: $glossary-scroll-nav-active-bg-color;
+      color: $glossary-scroll-nav-link-active-color;
+    }
