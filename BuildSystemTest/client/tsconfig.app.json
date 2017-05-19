@@ -6,7 +6,10 @@
     "baseUrl": "",
     "types": [],
     "paths": {
-      "crossfilter":  ["node_modules/crossfilter2"]
+      "crossfilter": [ "node_modules/crossfilter2" ],
+      "commonfrontend": [
+        "../../CommonFrontEnd"
+      ]
     }
   },
   "exclude": [

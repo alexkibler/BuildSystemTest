@@ -5,18 +5,18 @@ import { AppComponent } from './app.component';
 import { EagerComponent } from './eager.component';
 import { routing } from './app.routing';
 
-import { TestService } from '../../../CommonFrontEnd/angular/test.service';
+import { LibModule } from 'commonfrontend';
 
 @NgModule({
     imports: [
         BrowserModule,
-        routing
+        routing,
+        LibModule
     ],
     declarations: [
         AppComponent,
         EagerComponent
     ],
-    providers: [TestService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

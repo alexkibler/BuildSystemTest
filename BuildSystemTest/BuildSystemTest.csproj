@@ -45,38 +45,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Controllers\TestController.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Startup.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include=".angular-cli.json" />
-    <Content Include="appsettings.Development.json" />
-    <Content Include="appsettings.json" />
-    <Content Include="bundleconfig.json" />
-    <Content Include="client\tsconfig.app.json" />
-    <Content Include="client\tsconfig.spec.json" />
-    <Content Include="package.json" />
-    <Content Include="Properties\launchSettings.json" />
-    <Content Include="tsconfig.json" />
-    <Content Include="tslint.json" />
-    <Content Include="wwwroot\0.chunk.js" />
-    <Content Include="wwwroot\0.chunk.js.map" />
-    <Content Include="wwwroot\favicon.ico" />
-    <Content Include="wwwroot\index.html" />
-    <Content Include="wwwroot\inline.bundle.js" />
-    <Content Include="wwwroot\inline.bundle.js.map" />
-    <Content Include="wwwroot\main.bundle.js" />
-    <Content Include="wwwroot\main.bundle.js.map" />
-    <Content Include="wwwroot\polyfills.bundle.js" />
-    <Content Include="wwwroot\polyfills.bundle.js.map" />
-    <Content Include="wwwroot\styles.bundle.js" />
-    <Content Include="wwwroot\styles.bundle.js.map" />
-    <Content Include="wwwroot\vendor.bundle.js" />
-    <Content Include="wwwroot\vendor.bundle.js.map" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />

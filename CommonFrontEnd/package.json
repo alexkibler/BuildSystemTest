@@ -1,15 +1,7 @@
 {
-  "name": "build-system-test",
+  "name": "common-frontend",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "build-Debug": "npm -v && ng lint && ng build",
-    "build-Release": "npm -v && ng build --prod --aot false",
-    "continuous-dev": "npm -v && ng build -w -op wwwroot",
-    "lint": "npm -v && ng lint",
-    "postinstall": "npm run fixDC",
-    "fixDC": "replace-in-file \"define([\"\"d3\"\", \"\"crossfilter\"\"], _dc);\" \"define([\"\"d3\"\", \"\"crossfilter2\"\"], _dc);\" \"./node_modules/dc/dc.js\" [--isRegex]"
-  },
   "private": true,
   "dependencies": {
     "@angular/common": "^4.0.0",
@@ -28,9 +20,6 @@
   "devDependencies": {
     "@angular/cli": "1.0.3",
     "@angular/compiler-cli": "^4.0.0",
-    "@types/dc": "0.0.23",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
